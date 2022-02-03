@@ -3,6 +3,13 @@
 <head>
 <title>Portfolio Homepage</title>
 <link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -223,19 +230,4 @@ I built the Quip Ecommerce platform, named a Top 25 Invention by Time Magazine i
 </div>
 
 </body>
-<script>
-const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
-
-portfolioItems.forEach(portfolioItem => {
-
-portfolioItem.addEventListener('mouseover' , () => {
-portfolioItem.childNodes[1].classList.add('img-darken');
-})
-
-portfolioItem.addEventListener('mouseout' , () => {
-portfolioItem.childNodes[1].classList.remove('img-darken');
-})
-
-})
-</script>
 </html>
