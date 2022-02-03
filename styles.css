@@ -49,8 +49,8 @@ color: white;
 }
 
 .nav-wrapper .brand {
-font-family:'Lobster', cursive;;
-color: #64ffda;
+font-family: var(--font-inter);
+color: var(--green);
 }
 
 .left-side {
@@ -60,7 +60,6 @@ display:flex;
 .nav-wrapper> .left-side > div {
 margin-right: 20px;
 font-size:0.9em;
-text-transform:uppercase;
 
 }
 
@@ -71,14 +70,18 @@ transition: border-bottom 0.5s;
 
 }
 
+.nav-link-wrapper a .number {
+color: var(--green);
+}
+
 .nav-link-wrapper a {
-color: #ccd6f6;
+color: var(--lightest-slate);
 text-decoration: none;
 border-bottom: none;
 transition: color 0.5s;
-background-color: black;
 padding: 10px;
-font-family: 'Montserrat', sans-serif;
+font-family: var(--font-fira);
+font-size: var(--fz-xxs);
 }
 
 .nav-link-wrapper:hover {
