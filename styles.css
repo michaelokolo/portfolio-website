@@ -36,6 +36,7 @@ grid-template-columns: 1fr;
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --fz-heading: 32px;
+    --border-radius: 4px;
 }
 
 /*Nav Style*/
@@ -43,8 +44,8 @@ grid-template-columns: 1fr;
 .nav-wrapper {
 display:flex;
 justify-content:space-between;
-padding:38px;
-background-color: #0a192f;
+padding:35px;
+background-color: var(--dark-navy);
 color: white;
 }
 
@@ -59,19 +60,28 @@ display:flex;
 
 .nav-wrapper> .left-side > div {
 margin-right: 20px;
-font-size:0.9em;
-
 }
 
 .nav-link-wrapper {
-height: 22px;
-border-bottom: 1px solid transparent;
-transition: border-bottom 0.5s;
+height: 9px;
 
 }
 
 .nav-link-wrapper a .number {
 color: var(--green);
+}
+
+.nav-link-wrapper a .resume {
+    padding: 0.55rem 0.9rem;
+    border-radius: var(--border-radius);
+    border:var(--green) solid 1px;
+    transition:  0.5s;
+    color:var(--green);
+    background-color: transparent;
+}
+
+.nav-link-wrapper a .resume:hover {
+    background-color: var(--lightest-navy);
 }
 
 .nav-link-wrapper a {
@@ -84,13 +94,9 @@ font-family: var(--font-fira);
 font-size: var(--fz-xxs);
 }
 
-.nav-link-wrapper:hover {
-border-bottom: 1px solid #000000;
-}
 
 .nav-link-wrapper a:hover {
-color: black;
-background-color: lightseagreen;
+color: var(--green);
 }
 
 /* Portfolio styles */
