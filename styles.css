@@ -45,8 +45,9 @@ grid-template-columns: 1fr;
 display:flex;
 justify-content:space-between;
 padding:35px;
-background-color: var(--dark-navy);
+background-color: var(--navy);
 color: white;
+margin: 0;
 }
 
 .nav-wrapper .brand {
@@ -98,6 +99,21 @@ font-size: var(--fz-xxs);
 .nav-link-wrapper a:hover {
 color: var(--green);
 }
+/* Introduction*/
+
+.Introduction-items-wrapper {
+    margin-top: 0 auto;
+    padding-top: 0px;
+    background-color: var(--navy);
+}
+
+.intro-header {
+    color:var(--green);
+
+}
+
+
+
 
 /* Portfolio styles */
 
