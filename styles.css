@@ -48,6 +48,11 @@ padding:35px;
 background-color: var(--navy);
 color: white;
 margin: 0;
+overflow:hidden;
+position: fixed;
+top:0;
+width:100%;
+
 }
 
 .nav-wrapper .brand {
@@ -57,6 +62,11 @@ color: var(--green);
 
 .left-side {
 display:flex;
+}
+
+.right-side {
+    margin-right:30px;
+    padding-right: 40px;
 }
 
 .nav-wrapper> .left-side > div {
@@ -99,17 +109,45 @@ font-size: var(--fz-xxs);
 .nav-link-wrapper a:hover {
 color: var(--green);
 }
+
+/*page layout*/
+.main-content {
+    display: flex;
+}
+.center {
+    margin-top: 90px;
+}
+.left {
+    margin-top: 300px;
+}
+
+.right{
+    margin-top: 300px;
+}
+
+
 /* Introduction*/
 
 .Introduction-items-wrapper {
-    margin-top: 0 auto;
-    padding-top: 0px;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 1px;
+    padding-right: 20px;
+    padding-left: 110px;
     background-color: var(--navy);
+    justify-content: center;
+    align-items: flex-start;
+    
 }
 
 .intro-header {
     color:var(--green);
-
+    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+    font-family: var(--font-fira);
+    font-weight: lighter;
+    margin:0px 0px 30px 4px;
+    line-height: 1.1;
+    
 }
 
 
