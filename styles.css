@@ -48,10 +48,14 @@ padding:35px;
 background-color: var(--navy);
 color: white;
 margin: 0;
-overflow:hidden;
+overflow: hidden;
 position: fixed;
 top:0;
 width:100%;
+border-bottom: none;
+z-index: 12;
+
+
 
 }
 
@@ -116,21 +120,62 @@ color: var(--green);
 }
 .center {
     margin-top: 90px;
+    margin-left:90px;
+    margin-right: 90px;
+    z-index: 1;
+
 }
 .left {
-    margin-top: 300px;
+    padding-top: 300px;
+    z-index: 10;
+    position: fixed;
+    display: block;
+    background-color: var(--navy);
+    height: 100%;
+    width:90px
 }
 
-.right{
-    margin-top: 300px;
+.left ul li {
+    list-style-type: none;
+    padding-bottom: 20px;
+    line-height: 1.3;   
+}
+
+.left ul li a {
+    width:20px;
+    height: 20px;
+    vertical-align: middle;
+    
+    
+}
+
+.right {
+    padding-top: 300px;
+    z-index: 10;
+    position: fixed;
+    display: block;
+    left:1430px;
+    background-color: var(--navy);
+    height: 100%;
+    width: auto;
+}
+
+.right ul li {
+    list-style-type: none;
+    writing-mode: vertical-rl;
+   
+}
+
+.right ul li a {
+    text-decoration: none;
 }
 
 
 /* Introduction*/
 
 .Introduction-items-wrapper {
-    margin-top: 0;
-    padding-top: 30px;
+    margin-top: -1px;
+    padding-top: 40px;
     padding-bottom: 1px;
     padding-right: 20px;
     padding-left: 110px;
@@ -162,7 +207,7 @@ grid-template-columns: 1fr 1fr 1fr;
 }
 
 .portfolio-item-wrapper {
-position: relative;
+    position: relative;
 
 }
 
