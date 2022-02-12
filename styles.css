@@ -146,6 +146,7 @@ display: block;
 .left li {
     text-decoration: none;
     list-style-type: none;
+    padding-bottom: 20px;
 
 }
 .left ul {
@@ -169,20 +170,40 @@ display: block;
     max-width: 100%;
 }
 
+.left .social-list-items::after {
+content: "";
+display: block;
+width: 1px;
+height: 90px;
+margin: 0px auto;
+margin-top:10px;
+background-color: var(--light-slate);
+list-style: none;
+}
+
 .right {
   width: 60px;
   position: fixed;
   bottom: 0px;
   left: auto;
-  right: 40px;
+  right: 30px;
   z-index: 10;
 }
 
+.right .email-address::after{
+content: "";
+display: block;
+width: 1px;
+height: 90px;
+margin: 0px auto;
+margin-top:10px;
+background-color: var(--light-slate);
+list-style: none;
+}
 
 .right ul li {
     list-style-type: none;
     writing-mode: vertical-rl;
-   
 }
 
 .right ul li a {
@@ -190,6 +211,7 @@ display: block;
     color: var(--light-slate);
     margin: 20px auto;
     padding: 10px; 
+    margin-right:10px;
     font-family: var(--font-fira);
     font-size:var(--fz-xxs);
 }
