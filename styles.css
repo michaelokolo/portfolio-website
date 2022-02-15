@@ -310,7 +310,32 @@ list-style: none;
     
 }
 
-.main-content .center {
+.work-link{
+    margin-top: 50px;
+}
+
+.work {
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    font-size: var(--fz-xxs);
+    font-family: var(--font-fira);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 50px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+
+.work:hover{
+background-color: var(--lightest-navy);
+}
+
+.Introduction-items-wrapper {
     align-items: flex-start;
     justify-content: center;
     min-height: 100vh;
