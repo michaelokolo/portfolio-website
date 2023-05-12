@@ -156,7 +156,7 @@ html::-webkit-scrollbar-thumb{
     position: fixed;
     left: 0px;
     float: left;
-    border: 1px solid rgba(204, 204, 204, 0.32);
+    /* border: 1px solid rgba(204, 204, 204, 0.32); */
     width: 10%;
     height: 100%;
     text-align: justify;
@@ -181,7 +181,7 @@ html::-webkit-scrollbar-thumb{
 .mid-container {
     position: absolute;
     text-align: justify;
-    border: 1px solid rgba(204, 204, 204, 0.32);
+    /* border: 1px solid rgba(204, 204, 204, 0.32); */
     left:10%;
     right:10%;
     height: 100%;
@@ -194,30 +194,30 @@ html::-webkit-scrollbar-thumb{
 .home h1{
     color: var(--green);
     font-family: 'Fira Code', monospace;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    margin-top: 11rem;
+    margin-top: 3rem;
 }
 .home h2{
-    font-size: 6.5rem;
+    font-size: 6.0rem;
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--lightest-slate);
 }
 .home h3{
-    font-size: 6.5rem;
+    font-size: 6rem;
     margin: 0;
     font-family: 'Inter', sans-serif;
     color: var(--slate);
     line-height: 6.5rem;
-    margin:2rem 0rem;
+    margin:1rem 0rem;
 }
 .home p{
-    font-size: 1.6rem;
-    margin: 0;
+    font-size: 1.5rem;
+    
     font-family: 'Inter', sans-serif;
     color: var(--slate);
-    margin: 4rem 0rem;
+    margin: 3rem 0rem;
     line-height: 2.5rem;
 }
 .home p span{
@@ -232,12 +232,35 @@ html::-webkit-scrollbar-thumb{
     background: none;
     color: var(--green);
     border:0.1rem solid var(--green);
-    padding: 2rem 4rem;
+    padding: 1.6rem 2.8rem;
     border-radius: 4px;
     cursor: pointer; 
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
+}
+
+.left-container ul{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    margin: 0;
+    align-items: center;
+    
+}
+
+.left-container ul li{
+    font-size: 1.7rem;
+    color: var(--slate);
+}
+
+.left-container ul:after{
+    content: "";
+    width:0.05rem;
+    height: 8rem;
+    position: relative;
+    background-color: var(--slate);
+    margin-bottom: 0;
 }
 
 
