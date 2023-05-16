@@ -156,11 +156,11 @@ html::-webkit-scrollbar-thumb{
     position: fixed;
     left: 0px;
     float: left;
-    /* border: 1px solid rgba(204, 204, 204, 0.32); */
+
     width: 10%;
     height: 100%;
     text-align: justify;
-    padding: 10px;
+    
     display: flex;
     align-items: flex-end;
 }
@@ -169,7 +169,6 @@ html::-webkit-scrollbar-thumb{
     position: fixed;
     right: 0px;
     float: right;
-    border: 1px solid rgba(241, 130, 130, 0.32);
     width: 10%;
     height: 100%;
     text-align: justify;
@@ -243,21 +242,64 @@ html::-webkit-scrollbar-thumb{
 .left-container ul{
     display: flex;
     flex-direction: column;
-    gap:2rem;
+    gap:3.2rem;
     margin: 0;
     align-items: center;
-    
+    height: 100vh;
+    justify-content: end;
 }
 
 .left-container ul li{
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: var(--slate);
+    
+}
+
+.left-container ul li:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .left-container ul:after{
     content: "";
-    width:0.05rem;
-    height: 8rem;
+    width:0.1rem;
+    height: 9rem;
+    position: relative;
+    background-color: var(--slate);
+    margin-bottom: 0;
+}
+
+.right-container{
+    display: flex;
+    gap:3.2rem;
+    margin: 0;
+    align-items: center;
+    justify-content:end;
+    flex-direction: column;
+    padding: 0;
+}
+
+.right-container a{
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--slate);
+    font-family: 'Fira Code', monospace;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    padding: 0;
+}
+.right-container .email:after{
+    content: "";
+     width:0.1rem;
+    height: 9rem;
     position: relative;
     background-color: var(--slate);
     margin-bottom: 0;
