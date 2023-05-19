@@ -310,6 +310,9 @@ html::-webkit-scrollbar-thumb{
 
 
 @media (max-width:768px) {
+    html{
+        font-size:50%; 
+    }
     .hamburger{
         display: block;
     }
@@ -334,9 +337,10 @@ html::-webkit-scrollbar-thumb{
        position: absolute;
        right: -100%;
        background-color:#081d3b;
-       width:34rem;
+       width:100%;
        top:0%;
        bottom:0%;
+       height: 100vh;
        flex-direction: column;
        align-items: center;
        justify-content: center;
@@ -374,5 +378,12 @@ html::-webkit-scrollbar-thumb{
     .nav-menu .resume{
         padding:1.5rem 4rem;
         margin-top: 3rem;
+    }
+
+    .right-container{
+        display: none;
+    }
+    .left-container{
+        display: none;
     }
 }
