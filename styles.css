@@ -45,6 +45,10 @@ html::-webkit-scrollbar-thumb{
     background: #fff;
     border-radius: 5rem;
 }
+section{
+    padding: 2rem 11%;
+}
+
 
 /*font-family: 'Inter', sans-serif;*/
 /*font-family: 'Roboto Mono', monospace;*/
@@ -152,7 +156,7 @@ html::-webkit-scrollbar-thumb{
     justify-content: center;
 } */
 
-.left-container {
+/* .left-container {
     position: fixed;
     left: 0px;
     float: left;
@@ -180,7 +184,7 @@ html::-webkit-scrollbar-thumb{
 .mid-container {
     position: absolute;
     text-align: justify;
-    /* border: 1px solid rgba(204, 204, 204, 0.32); */
+     border: 1px solid rgba(204, 204, 204, 0.32); 
     left:10%;
     right:10%;
     height: 100%;
@@ -188,6 +192,14 @@ html::-webkit-scrollbar-thumb{
     display: flex;
     justify-content: center;
     flex-direction: column;
+} */
+
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .home h1{
@@ -195,7 +207,7 @@ html::-webkit-scrollbar-thumb{
     font-family: 'Fira Code', monospace;
     font-size: 1.4rem;
     font-weight: 400;
-    margin-top: 3rem;
+    
 }
 .home h2{
     font-size: 6.0rem;
@@ -213,11 +225,12 @@ html::-webkit-scrollbar-thumb{
 }
 .home p{
     font-size: 1.5rem;
-    
+    max-width: 48.8rem;
     font-family: 'Inter', sans-serif;
     color: var(--slate);
     margin: 3rem 0rem;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
+    
 }
 .home p span{
     color: var(--green);
@@ -305,14 +318,73 @@ html::-webkit-scrollbar-thumb{
     margin-bottom: 0;
 }
 
+/* About section */
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex:0 0 30rem;
+    position: relative;
+}
+
+.about h1{
+    color: var(--lightest-slate);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.3rem;
+    position: relative;
+
+}
+.about h1:after{
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 0.015px;
+    background-color: var(--lightest-slate);
+    top: 50%;
+    
+}
+.about h1 span{
+    color: var(--green);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+}
+
+.about .row .image img{
+    width: 100%;
+    border-radius: 5px;
+
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    
+}
 
 
+/*media queries*/
+@media (max-width:991px) {
+    html{
+        font-size:55%; 
+    }
+
+}
 
 
 @media (max-width:768px) {
-    html{
-        font-size:50%; 
+   
+    .home h1{
+        font-size: 1.6rem;
     }
+    .home h2, .home h3{
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+    }
+    .home p{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+   
     .hamburger{
         display: block;
     }
@@ -386,4 +458,11 @@ html::-webkit-scrollbar-thumb{
     .left-container{
         display: none;
     }
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50%; 
+    }
+    
 }
