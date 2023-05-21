@@ -319,15 +319,18 @@ section{
 }
 
 /* About section */
+.about{
+    height: 100vh;
+}
+
 .about .row{
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.about .row .image{
-    flex:0 0 30rem;
-    position: relative;
-}
+
 
 .about h1{
     color: var(--lightest-slate);
@@ -339,10 +342,11 @@ section{
 .about h1:after{
     content: "";
     position: absolute;
-    width: 40rem;
-    height: 0.015px;
+    width: 35rem;
+    height: 0.05rem;
     background-color: var(--lightest-slate);
     top: 50%;
+    left: 16rem;
     
 }
 .about h1 span{
@@ -351,15 +355,137 @@ section{
     font-size: 1.8rem;
 }
 
+.about .row .image{
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 20rem;
+    
+    position: relative;
+}
+
+.green.overlay{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: rgb(100, 255, 218, 0.5);
+    position: absolute;
+    top:0;
+}
+
+
 .about .row .image img{
     width: 100%;
     border-radius: 5px;
 
 }
+
+
 .about .row .content{
-    flex: 1 1 45rem;
+    flex: 1 1 50rem;
+   
+}
+
+.about .row .content p{
+    font-size: 1.7rem;  
+    font-family: 'Inter', sans-serif;
+    color: var(--slate);
+    line-height: 2.5rem;
+    margin: 0;
+}
+
+.about .row .content p a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+.about .row .content p a:hover{
+    text-decoration: underline;
+}
+
+.about .row .content ul{
+    margin: 0;
+    padding: 0;
+}
+
+.about .row .content ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about .row .content ul li{
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--slate);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     
 }
+
+.about .row .content ul li i{
+    color: var(--green);
+    font-size: 1rem;
+}
+
+/* Work Section */
+
+
+.work h1{
+   color: var(--lightest-slate);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.3rem;
+    position: relative;
+}
+
+.work h1 span{
+    color: var(--green);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+}
+
+.work h1:after{
+    content: "";
+    position: absolute;
+    width: 35rem;
+    height: 0.05rem;
+    background-color: var(--lightest-slate);
+    top: 50%;
+    left: 29rem;
+}
+
+.work .projects .image{
+    width: 50rem;
+    height: 30rem;
+    
+
+}
+
+.work .projects .image img{
+    width: 100%;
+}
+
+.work .projects .project{
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*media queries*/
@@ -372,6 +498,9 @@ section{
 
 
 @media (max-width:768px) {
+    section{
+        padding: 2rem 5%;
+    }
    
     .home h1{
         font-size: 1.6rem;
@@ -458,6 +587,17 @@ section{
     .left-container{
         display: none;
     }
+
+    .about h1:after{
+        width: 20rem;
+    }
+    .about .row .image{
+        display: flex;
+        justify-content: center;
+    }
+
+   
+    
 }
 
 @media (max-width:450px){
