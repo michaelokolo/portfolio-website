@@ -97,14 +97,18 @@ section{
     gap:2.3rem;
 }
 .nav-menu ul li{
-    font-size: 1.2rem;
-    font-family: 'Fira Code', monospace;
     list-style: none;
+}
+
+.nav-menu ul li a{
+    text-decoration: none;
     color: var(--lightest-slate);
     font-weight: 600;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-family: 'Fira Code', monospace;
 }
-.nav-menu ul li:hover{
+.nav-menu ul li a:hover{
     color: var(--green);
 }
 .nav-menu ul li span{
@@ -356,6 +360,7 @@ section{
 
 .about .row .image{
     flex-basis:300px;
+    position: relative;
 }
 
 .about .row .image img{
@@ -365,14 +370,24 @@ section{
 
 }
 
-/* .green.overlay{
-    width: 300px;
-    height: 300px;
+.green{
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     background-color: rgb(100, 255, 218, 0.5);
     position: absolute;
     top:0;
-} */
+    display: block;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+
+.about .row .image:hover .green{
+    display:none;
+}
+
 
 .about .row .content{
     flex: 1 1 45rem;
@@ -406,6 +421,7 @@ section{
 .about .row .content ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .about .row .content ul li{
@@ -452,21 +468,91 @@ section{
     top: 50%;
     left: 29rem;
 }
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
 
-.work .projects .image{
-    width: 50rem;
-    height: 30rem;
-    
+.work .project .image{
+   flex:1 1 30rem;
+   
 
 }
 
-.work .projects .image img{
+.work .project .image img{
     width: 100%;
 }
 
-.work .projects .project{
-    flex-wrap: wrap;
+.work .project .content{
+    flex: 1 1 30rem;
+}
+
+.work .project .content{
+    text-align: right;
+}
+
+.work .project .content h2{
+    color: var(--green);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0.5rem;
+}
+.work .project .content h3{
+    color: var(--lightest-slate);
+    font-family: 'Inter', sans-serif;
+    font-size: 2.3rem;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.work .project .content p{
+    font-size: 1.5rem;  
+    font-family: 'Inter', sans-serif;
+    color: var(--slate);
+    line-height: 2.5rem;
+    margin: 0;
+    word-spacing: -2px;
+    background-color:#081d3b;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    border-radius: 5px;
+}
+.work .project .content .stack ul{
     display: flex;
+    justify-content: right;
+    list-style: none;
+    gap:1rem;
+    
+}
+.work .project .content .stack ul li{
+    color: var(--slate);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.work .project .content .links{
+    display: flex;
+    gap: 2rem;
+    justify-content: right;
+}
+
+.work .project .content .links a{
+    text-decoration: none;
+    color: var(--slate);
+    font-size: 1.7rem;
+    
+}
+
+.project .image{
+    position: relative;
+}
+
+.project .image:hover .green{
+    display:none;
 }
 
 
@@ -485,6 +571,7 @@ section{
 
 
 /*media queries*/
+
 @media (max-width:991px) {
     html{
         font-size:55%; 
@@ -559,14 +646,14 @@ section{
         gap:3.5rem;
         
     }
-    .nav-menu ul li{
+    .nav-menu ul li a{
         font-size: 1.6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap:0.8rem
     }
-    .nav-menu ul li span{
+    .nav-menu ul li a span{
         display: block;
         text-align: center;
         font-size: 1.2rem;
