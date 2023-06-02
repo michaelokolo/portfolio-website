@@ -47,6 +47,7 @@ html::-webkit-scrollbar-thumb{
 }
 section{
     padding: 2rem 11%;
+    
 }
 
 
@@ -342,7 +343,7 @@ section{
     position: relative;
 
 }
-.about h1:after{
+/* .about h1:after{
     content: "";
     position: absolute;
     width: 35rem;
@@ -351,7 +352,7 @@ section{
     top: 50%;
     left: 16rem;
     
-}
+} */
 .about h1 span{
     color: var(--green);
     font-family: 'Roboto Mono', monospace;
@@ -445,7 +446,9 @@ section{
 
 /* Work Section */
 
-
+.work{
+    margin: 10rem 0;
+}
 .work h1{
    color: var(--lightest-slate);
     font-family: 'Inter', sans-serif;
@@ -459,7 +462,7 @@ section{
     font-size: 1.8rem;
 }
 
-.work h1:after{
+/* .work h1:after{
     content: "";
     position: absolute;
     width: 35rem;
@@ -467,7 +470,7 @@ section{
     background-color: var(--lightest-slate);
     top: 50%;
     left: 29rem;
-}
+} */
 .project{
     display: flex;
     flex-wrap: wrap;
@@ -500,6 +503,9 @@ section{
     padding: 0;
     margin: 0.5rem;
 }
+.work .project .content a{
+    text-decoration: none;
+}
 .work .project .content h3{
     color: var(--lightest-slate);
     font-family: 'Inter', sans-serif;
@@ -507,6 +513,12 @@ section{
     position: relative;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    
+}
+.work .project .content h3:hover{
+    color:var(--green)
+
 }
 
 .work .project .content p{
@@ -531,9 +543,12 @@ section{
 .work .project .content .stack ul li{
     color: var(--slate);
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 600;
+
 }
+
+
 .work .project .content .links{
     display: flex;
     gap: 2rem;
@@ -543,8 +558,12 @@ section{
 .work .project .content .links a{
     text-decoration: none;
     color: var(--slate);
-    font-size: 1.7rem;
-    
+    font-size: 2rem;
+    margin-top: 1.5rem;
+
+}
+.work .project .content .links a:hover{
+    color: var(--green);
 }
 
 .project .image{
@@ -679,8 +698,33 @@ section{
         justify-content: center;
     }
 
-   
-    
+    .project .image{
+        display:none;
+    }
+    .project .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        background: url("./images/Quizzical.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 0 0 1000px rgba(2,12,27,0.9);
+    }
+    .project .content .stack ul{
+        padding: 0;
+    }
+    .work .project .content p{
+        text-align: left;
+        background-color: transparent;
+        margin: 0;
+        padding: 3rem 0;
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
 }
 
 /* @media (max-width:450px){
