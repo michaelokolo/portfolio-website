@@ -204,8 +204,11 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     
 }
+
+
 
 .home h1{
     color: var(--green);
