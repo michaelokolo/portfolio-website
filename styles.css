@@ -471,17 +471,42 @@ section{
     top: 50%;
     left: 29rem;
 } */
+
+/* @keyframes color {
+    from{
+        top: 25px;
+    }
+    to{
+        top: 0;
+    }
+} */
 .project{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
+    margin-top: 4rem;
+    box-shadow: 2px 4px 8px var(--dark-navy);
+    padding: 2rem;
+    /* animation-name:color;
+    animation-duration: 1s;
+    position: relative; */
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(50px);
+    opacity:0;
+    transition: all 1s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .work .project .image{
    flex:1 1 30rem;
-   
-
 }
 
 .work .project .image img{
@@ -697,9 +722,24 @@ section{
         display: flex;
         justify-content: center;
     }
-
+    .project{
+        position: relative;
+        box-shadow: none;
+        padding: 0;
+        
+    }
     .project .image{
-        display:none;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        z-index: 99;
+        max-width: 50rem;
+    }
+    
+    .project .image .green{
+        display: none;
     }
     .project .content{
         display: flex;
@@ -708,11 +748,13 @@ section{
         padding: 5rem 4rem;
         margin-top: 4rem;
         margin-bottom: 4rem;
-        background: url("./images/Quizzical.jpg");
+        /* background: url("./images/Quizzical.jpg"); */
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: inset 0 0 0 1000px rgba(2,12,27,0.9);
+        z-index: 100;
+        margin-top: 0;
     }
     .project .content .stack ul{
         padding: 0;
@@ -725,6 +767,7 @@ section{
         font-size: 1.7rem;
         font-weight: 500;
     }
+    
 }
 
 /* @media (max-width:450px){
