@@ -245,10 +245,14 @@ section{
     width: 2px;
     height: 42px;
     background-color: white;
-    
-    
+    animation: blink .6s linear infinite alternate;
 }
-
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 
 .home h3{
     font-size: 6rem;
@@ -367,6 +371,7 @@ section{
 
 .about{
     background-color: var(--navy);
+    margin-top: 5rem;
 }
 .about .row{
     display: flex;
@@ -640,9 +645,43 @@ section{
 .project .image:hover .green{
     display:none;
 }
+.contact{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    align-items: center;
+}
 
+.contact h1{
+    color: var(--green);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+}
 
+.contact h2{
+    font-size: 6.0rem;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--lightest-slate);
+}
+.contact p{
+    font-size: 1.5rem;
+    max-width: 48.8rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--slate);
+    margin: 3rem 0rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
 
+.footer h4{
+    color: var(--light-slate);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+}
 
 
 
