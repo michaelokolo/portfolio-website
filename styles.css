@@ -205,10 +205,20 @@ section{
     flex-direction: column;
     justify-content: center;
     position: relative;
+    background-color: rgba(10, 25, 47, 0.8);
     
 }
 
-
+.background-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .home h1{
     color: var(--green);
@@ -223,6 +233,23 @@ section{
     font-family: 'Inter', sans-serif;
     color: var(--lightest-slate);
 }
+.typing{
+    display: flex;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+}
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    
+    
+}
+
+
 .home h3{
     font-size: 6rem;
     margin: 0;
@@ -338,7 +365,9 @@ section{
 
 /* About section */
 
-
+.about{
+    background-color: var(--navy);
+}
 .about .row{
     display: flex;
     align-items: center;
@@ -633,7 +662,9 @@ section{
     html{
         font-size:55%; 
     }
-
+    .home h3{
+        font-size:5rem;
+    }
 }
 
 

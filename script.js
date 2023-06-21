@@ -6,6 +6,7 @@ const reveals = document.querySelectorAll('.reveal')
 const homeElement = document.querySelector('.home')
 let container = document.querySelector('.home div h3 .text')
 
+
 hamburger.addEventListener("click", ()=>{
     !navMenu.classList.contains("active") ? navMenu.classList.add('active') : navMenu.classList.remove('active')
     !hamburger.classList.contains("active") ? hamburger.classList.add('active') : hamburger.classList.remove('active')
@@ -47,9 +48,9 @@ homeElement.animate(
 )
 
 const carouselText = [
-    {text: "build things for the web.", color:'red'},
-    {text: "'m a front-end developer.", color:'orange'},
-    {text: "'m a back-end developer.", color:'yellow'}
+    {text: "  'm a software engineer.", color:'#64ffda'},
+    {text: " 'm a front-end developer.", color:'orange'},
+    {text: " 'm a back-end developer.", color:'yellow'}
 ]
 
 async function text(list, eleRef){
